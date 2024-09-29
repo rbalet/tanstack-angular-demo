@@ -2,21 +2,21 @@
   "session": {
     "id": 1
   },
-  "heroes": [
+  "todos": [
     {
       "id": 1,
-      "name": "Batman",
-      "alterEgo": "Bruce Wayne"
+      "title": "Will do something",
+      "type": "todo"
     },
     {
       "id": 2,
-      "name": "Superman",
-      "alterEgo": "Clark Kent"
+      "title": "Doing something else",
+      "type": "doing"
     },
     {
       "id": 3,
-      "name": "Wonder Woman",
-      "alterEgo": "Princess Diana"
+      "title": "Did something",
+      "type": "done"
     }
   ]
 }

@@ -1,15 +1,15 @@
 import { CommonModule } from '@angular/common'
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core'
-import { Hero } from '@models/core'
+import { Todo } from '@models/core'
 
 @Component({
-  selector: 'tanstack-hero',
+  selector: 'tanstack-todo',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './hero.component.html',
-  styleUrl: './hero.component.scss',
+  templateUrl: './todo.component.html',
+  styleUrl: './todo.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HeroComponent {
-  @Input({ required: true }) attributes!: Hero
+export class TodoComponent {
+  @Input({ required: true }) attributes!: Todo
 }

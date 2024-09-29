@@ -1,7 +1,7 @@
 import { NgFor } from '@angular/common'
 import { ChangeDetectionStrategy, Component, inject } from '@angular/core'
-import { HeroComponent } from '@pages/shared/components/hero/hero.component'
-import { HeroesService } from '@pages/shared/services/heroes.service'
+import { TodoComponent } from '@pages/shared/components/todo/todo.component'
+import { ToDoService } from '@pages/shared/services/todos.service'
 
 @Component({
   selector: 'tanstack-home',
@@ -10,15 +10,15 @@ import { HeroesService } from '@pages/shared/services/heroes.service'
     NgFor,
 
     // Components
-    HeroComponent,
+    TodoComponent,
   ],
-  providers: [HeroesService],
+  providers: [ToDoService],
   templateUrl: './home.page.html',
   styleUrl: './home.page.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomePage {
-  #heroesService = inject(HeroesService)
+  #ToDoService = inject(ToDoService)
 
-  heroes$ = this.#heroesService.getEntries()
+  todos$ = this.#ToDoService.getEntries()
 }

@@ -1,10 +1,10 @@
-@if (heroes$.data()) {
-  @for (hero of heroes$.data(); track $index) {
-    <tanstack-hero [attributes]="hero"></tanstack-hero>
+@if (todos$.data()) {
+  @for (todo of todos$.data(); track $index) {
+    <tanstack-todo [attributes]="todo"></tanstack-todo>
   }
 } @else {
-  <tanstack-hero
+  <tanstack-todo
     *ngFor="let i of [1, 2, 3, 4]"
-    [attributes]="{ id: 0, name: '--' }"
-  ></tanstack-hero>
+    [attributes]="{ id: 0, title: '--' }"
+  ></tanstack-todo>
 }

@@ -2,8 +2,8 @@ export interface Session {
   // @ToDo
 }
 
-export interface Hero {
+export interface Todo {
   id: number
-  name: string
-  alterEgo?: string
+  title: string
+  type?: 'todo' | 'doing' | 'done'
 }
