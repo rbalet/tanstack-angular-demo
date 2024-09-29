@@ -3,7 +3,7 @@ import { Injectable, inject } from '@angular/core'
 import { BASE_URL } from '@bases/base.token'
 import { Session } from '@models/core'
 import { CreateQueryResult, injectQuery } from '@tanstack/angular-query-experimental'
-import { BehaviorSubject, firstValueFrom, map } from 'rxjs'
+import { BehaviorSubject, catchError, firstValueFrom, map } from 'rxjs'
 
 @Injectable({
   providedIn: 'root',
@@ -29,6 +29,11 @@ export class SessionService {
               this.initialized$.next(true)
 
               return value
+            }),
+            catchError((error) => {
+              this.initialized$.next(true)
+
+              throw error
             }),
           ),
         ),
